@@ -1,10 +1,19 @@
 function logout() {
-    $.get("/api/logout", function(data){
-        if (0 == data.errno) {
-            location.href = "/";
+
+    $.ajax({
+        url: "/api/v1.0/session",
+        type: "delete",
+        headers: {
+            "X-CSRFTOKEN": getCookie("csrf_token")
+        },
+        dataType: "json",
+        success: function (resp) {
+            if (resp.errno === "0") {
+                location.href = "/index.html"
+            }
         }
     })
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
 })

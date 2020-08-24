@@ -29,6 +29,9 @@ class Config(object):
     SESSION_USE_SIGNER = True
     PERMANENT_SESSION_LIFETIME = 3600 * 24  # session数据的有效期，单位秒
 
+    # 不转换为ascii，正常显示中文
+    JSON_AS_ASCII = False
+
 
 class DevelopmentConfig(Config):
     """开发模式的配置信息"""

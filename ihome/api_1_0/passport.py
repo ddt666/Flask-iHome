@@ -11,7 +11,7 @@ from . import api
 from flask import request, jsonify, current_app, session
 from sqlalchemy.exc import IntegrityError
 
-from ihome.utils.response_code import RET
+from ihome.utils.response_code import RET, BaseResponse
 from ihome import redis_store, db
 from ihome.models import User
 from ihome import constants
@@ -157,3 +157,33 @@ def login():
     session["user_id"] = user.id
 
     return jsonify(errno=RET.OK, errmsg="登录成功")
+
+
+@api.route("/session", methods=["GET"])
+def check_login():
+    """检查登陆状态"""
+    name = session.get("name")
+    resp = BaseResponse()
+    if name:
+        resp.errno = RET.OK
+        resp.errmsg = "true"
+        resp.data = {"name": name}
+        return jsonify(resp.dict)
+    else:
+        resp.errno = RET.SESSIONERR
+        resp.errmsg = "false"
+        return jsonify(resp.dict)
+
+
+@api.route("/session", methods=["DELETE"])
+def logout():
+    """登出"""
+
+    session.clear()
+
+    # 清除session数据
+    resp = BaseResponse()
+    resp.errno = RET.OK
+    resp.errmsg = "OK"
+
+    return jsonify(resp.dict)
