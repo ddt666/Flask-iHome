@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="736f106e-8abb-48f9-90ba-2ef99ea9c1ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ihome/utils/image_storage_bak.py" beforeDir="false" afterPath="$PROJECT_DIR$/ihome/utils/image_storage_bak.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ihome/utils/sms_bak.py" beforeDir="false" afterPath="$PROJECT_DIR$/ihome/utils/sms_bak.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ihome/api_1_0/profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihome/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/ihome/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ihome/static/html/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/ihome/static/html/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,35 +60,56 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6521469">
+    <splitter split-orientation="horizontal" split-proportion="0.6695491">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ihome/utils/commons.py">
+            <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage_bak.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="236">
-                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                <state relative-caret-position="308">
+                  <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ihome/api_1_0/profile.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
                   <folding>
-                    <element signature="e#78#120#0" expanded="true" />
+                    <element signature="e#77#127#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/note.txt">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ihome/static/html/profile.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+                <state relative-caret-position="236">
+                  <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage_bak.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ihome/constants.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+                <state relative-caret-position="528">
+                  <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ihome/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="526">
+                  <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+                  <folding>
+                    <element signature="e#75#87#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -93,28 +117,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+                <state relative-caret-position="484">
+                  <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/qiniu/__init__.py">
+            <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
+                <state relative-caret-position="2724">
+                  <caret line="185" column="23" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
                   <folding>
-                    <element signature="e#236#272#0" expanded="true" />
+                    <element signature="e#79#88#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/qiniu/services/storage/uploader.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -146,15 +162,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -162,8 +169,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ihome/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
+                <state relative-caret-position="342">
+                  <caret line="25" column="14" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="14" />
                   <folding>
                     <element signature="e#24#53#0" expanded="true" />
                   </folding>
@@ -209,7 +216,6 @@
         <option value="$PROJECT_DIR$/ihome/test.py" />
         <option value="$PROJECT_DIR$/ihome/api_1_0/verify_code.py" />
         <option value="$PROJECT_DIR$/ihome/models.py" />
-        <option value="$PROJECT_DIR$/ihome/constants.py" />
         <option value="$PROJECT_DIR$/ihome/__init__.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/ihome/utils/response_code.py" />
@@ -225,10 +231,13 @@
         <option value="$PROJECT_DIR$/ihome/static/html/register.html" />
         <option value="$PROJECT_DIR$/ihome/utils/commons.py" />
         <option value="$PROJECT_DIR$/note.txt" />
-        <option value="$PROJECT_DIR$/ihome/utils/image_storage.py" />
         <option value="$PROJECT_DIR$/ihome/utils/sms.py" />
         <option value="$PROJECT_DIR$/ihome/utils/sms_bak.py" />
         <option value="$PROJECT_DIR$/ihome/utils/image_storage_bak.py" />
+        <option value="$PROJECT_DIR$/ihome/utils/image_storage.py" />
+        <option value="$PROJECT_DIR$/ihome/constants.py" />
+        <option value="$PROJECT_DIR$/ihome/api_1_0/profile.py" />
+        <option value="$PROJECT_DIR$/ihome/static/html/profile.html" />
       </list>
     </option>
   </component>
@@ -262,13 +271,26 @@
               <item name="Flask-iHome" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flask-iHome" type="462c0819:PsiDirectoryNode" />
               <item name="ihome" type="462c0819:PsiDirectoryNode" />
-              <item name="api_1_0" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flask-iHome" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flask-iHome" type="462c0819:PsiDirectoryNode" />
               <item name="ihome" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-iHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-iHome" type="462c0819:PsiDirectoryNode" />
+              <item name="ihome" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-iHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-iHome" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -437,19 +459,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597737090641</updated>
-      <workItem from="1597737101381" duration="82509000" />
+      <workItem from="1597737101381" duration="85716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82509000" />
+    <option name="totallyTimeSpent" value="85716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" weight="0.32925472" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -486,19 +508,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a25d36ce-b9c3-4d44-a027-22a26b514af9/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/utils/captcha/captcha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="223" selection-start-line="223" selection-end-line="223" />
-          <folding>
-            <element signature="e#104#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/接口文档.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -590,23 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-          <folding>
-            <element signature="e#24#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ihome/api_1_0/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -618,16 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="305" column="4" selection-start-line="305" selection-start-column="4" selection-end-line="305" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#75#87#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="185" column="23" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
-          <folding>
-            <element signature="e#79#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -830,13 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ihome/utils/sms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="734">
@@ -853,8 +818,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage_bak.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/utils/image_storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#75#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/passport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2724">
+          <caret line="185" column="23" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+          <folding>
+            <element signature="e#79#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="14" />
+          <folding>
+            <element signature="e#24#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/api_1_0/profile.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding>
+            <element signature="e#77#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ihome/static/html/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
         </state>
       </provider>
     </entry>

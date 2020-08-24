@@ -129,6 +129,9 @@ dmypy.json
 .pyre/
 
 .logs/
+.idea
+
+# config文件
 image_storage.py
 sms.py
 
