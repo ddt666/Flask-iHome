@@ -8,9 +8,9 @@
 from ronglian_sms_sdk import SmsSDK
 import json
 
-accId = '8***6'
-accToken = 'd***8'
-appId = '8***d'
+accId = '8a****86'
+accToken = 'd7*****f8'
+appId = '8a*****8d'
 
 
 class SMS(object):
@@ -48,6 +48,6 @@ class SMS(object):
 
 if __name__ == '__main__':
     sms = SMS()
-    ret = sms.send_message(mobile="186******8", data=("1234", "5"), tid=1)
+    ret = sms.send_message(mobile="186****8", data=("1234", "5"), tid=1)
 
     print(ret)

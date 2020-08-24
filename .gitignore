@@ -128,3 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.logs/
+image_storage.py
+sms.py
+
+
