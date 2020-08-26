@@ -5,7 +5,7 @@
 @file:profile.py
 @time:2020/08/24
 """
-from flask import g, current_app, jsonify, request
+from flask import g, current_app, jsonify, request, session
 
 from . import api
 from ihome.utils.commons import login_require
@@ -95,8 +95,10 @@ def change_user_name():
         resp.errmsg = "保存用户名失败"
         return jsonify(resp.dict)
 
+    session["name"] = name
     resp.errno = RET.OK
     resp.errmsg = "保存成功"
+    resp.data = {"name": name}
 
     return jsonify(resp.dict)
 
@@ -163,30 +165,32 @@ def set_user_auth():
     resp.errmsg = "OK"
     return jsonify(resp.dict)
 
-# @api.route("users/auth", methods=["GET"])
-# @login_require
-# def get_user_auth():
-#     """获取用户实名信息"""
-#     resp = BaseResponse()
-#
-#     user_id = g.user_id
-#
-#     try:
-#         user = User.query.get(id=user_id)
-#     except Exception as e:
-#         resp.errno = RET.DBERR
-#         resp.errmsg = "查询用户失败"
-#         current_app.logger.error(e)
-#         return jsonify(resp.dict)
-#
-#     if user is None:
-#         resp.errno = RET.NODATA
-#         resp.errmsg = "无效操作"
-#         return jsonify(resp.dict)
-#
-#     print(user)
-#     resp.errno = RET.OK
-#     resp.errmsg = "OK"
-#     resp.data = user.to_dict()
-#
-#     return jsonify(resp.dict)
+
+@api.route("users/auth", methods=["GET"])
+@login_require
+def get_user_auth():
+    """获取用户实名信息"""
+    resp = BaseResponse()
+
+    user_id = g.user_id
+
+    print(user_id)
+    try:
+        user = User.query.get(user_id)
+    except Exception as e:
+        resp.errno = RET.DBERR
+        resp.errmsg = "查询用户失败"
+        current_app.logger.error(e)
+        return jsonify(resp.dict)
+
+    if user is None:
+        resp.errno = RET.NODATA
+        resp.errmsg = "无效操作"
+        return jsonify(resp.dict)
+
+    print(user)
+    resp.errno = RET.OK
+    resp.errmsg = "OK"
+    resp.data = user.auth_to_dict()
+
+    return jsonify(resp.dict)

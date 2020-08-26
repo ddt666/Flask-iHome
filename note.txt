@@ -35,3 +35,5 @@ http://redisdoc.com/index.html
 2) 选择第三方服务
     七牛云存储，按照访问次数收费
 
+4. 前端js模板 art-template
+http://aui.github.io/art-template/zh-cn/index.html

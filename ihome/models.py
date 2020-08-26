@@ -16,12 +16,21 @@ class BaseModel(object):
     def to_dict(self):
 
         model_dict = {}
+        # print("self.__table__.columns", self.__table__.columns)
         for c in self.__table__.columns:
-            if hasattr(self, c.name + "_to_dict"):
-                c_to_dict = getattr(self, c.name + "_to_dict")
-                model_dict[c.name] = c_to_dict()
+            k = c.name
+            if c.primary_key:
+                k = self.__class__.__name__.lower() + "_id"
+
+            if hasattr(self, "get_" + c.name):
+                c_to_dict = getattr(self, "get_" + c.name)
+                attribute = c_to_dict()
             else:
-                model_dict[c.name] = getattr(self, c.name)
+                attribute = getattr(self, c.name)
+                if isinstance(attribute, datetime):
+                    attribute = attribute.strftime("%Y-%m-%d %H:%M:%S")
+
+            model_dict[k] = attribute
 
         # return {c.name: getattr(self, c.name) for c in self.__table__.columns}
         return model_dict
@@ -66,8 +75,22 @@ class User(BaseModel, db.Model):
         """
         return check_password_hash(self.password_hash, password)
 
-    def avatar_url_to_dict(self):
+    def get_avatar_url(self):
         return constants.QINIU_URL_DOMAIN + self.avatar_url if self.avatar_url else ""
+
+    def to_dict(self):
+        d = super(User, self).to_dict()
+        d.pop("real_name")
+        d.pop("id_card")
+        d.pop("password_hash")
+        return d
+
+    def auth_to_dict(self):
+        return {
+            "user_id": self.id,
+            "real_name": self.real_name,
+            "id_card": self.id_card
+        }
 
 
 class Area(BaseModel, db.Model):

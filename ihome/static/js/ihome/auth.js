@@ -10,7 +10,7 @@ function showSuccessMsg() {
 
 $(document).ready(function (e) {
 
-    $.get(window.serv + "/user", function (resp) {
+    $.get(window.serv + "/users/auth", function (resp) {
         if (resp.errno === "0") {
             if (resp.data.real_name && resp.data.id_card) {
 
