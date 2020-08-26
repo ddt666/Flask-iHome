@@ -22,4 +22,4 @@ LOGIN_ERROR_MAX_TIMES = 5
 LOGIN_ERROR_FORBID_TIME = 10 * 60
 
 # 七牛的域名
-QINIU_URL_DOMAIN = "qfk96nlw7.hd-bkt.clouddn.com/"
+QINIU_URL_DOMAIN = "http://qfk96nlw7.hd-bkt.clouddn.com/"

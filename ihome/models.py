@@ -3,6 +3,7 @@
 from datetime import datetime
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
+from ihome import constants
 
 
 class BaseModel(object):
@@ -10,6 +11,20 @@ class BaseModel(object):
 
     create_time = db.Column(db.DateTime, default=datetime.now)  # 记录的创建时间
     update_time = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)  # 记录的更新时间
+
+    # 把SQLAlchemy查询对象转换成字典
+    def to_dict(self):
+
+        model_dict = {}
+        for c in self.__table__.columns:
+            if hasattr(self, c.name + "_to_dict"):
+                c_to_dict = getattr(self, c.name + "_to_dict")
+                model_dict[c.name] = c_to_dict()
+            else:
+                model_dict[c.name] = getattr(self, c.name)
+
+        # return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        return model_dict
 
 
 class User(BaseModel, db.Model):
@@ -50,6 +65,9 @@ class User(BaseModel, db.Model):
         :return: True or False
         """
         return check_password_hash(self.password_hash, password)
+
+    def avatar_url_to_dict(self):
+        return constants.QINIU_URL_DOMAIN + self.avatar_url if self.avatar_url else ""
 
 
 class Area(BaseModel, db.Model):

@@ -16,4 +16,15 @@ function logout() {
 }
 
 $(document).ready(function () {
+
+    $.get("/api/v1.0/user", function (resp) {
+
+        if (resp.errno === "0") {
+            $("#user-avatar").attr("src", resp.data.avatar_url);
+            $("#user-name").html(resp.data.name);
+            $("#user-mobile").html(resp.data.mobile);
+        } else if (resp.errno === "4101") {
+            location.href = "/login.html"
+        }
+    })
 })
