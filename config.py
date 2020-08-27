@@ -11,6 +11,7 @@ import redis
 class Config(object):
     """配置信息"""
 
+    # 启用Session的时候,一定要有它
     SECRET_KEY = "M38SFG78GS9S0D0"
 
     # 数据库
