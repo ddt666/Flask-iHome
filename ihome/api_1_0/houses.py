@@ -234,13 +234,14 @@ def save_house_image():
         resp.errmsg = "保存图片失败"
         return jsonify(resp.dict)
 
+    # print(house_id,file_name)
     # 保存图片信息到数据库中
     house_image = HouseImage(house_id=house_id, url=file_name)
 
     db.session.add(house_image)
 
     if not house.index_image_url:
-        house.index_image_url = house_image
+        house.index_image_url = file_name
         db.session.add(house)
 
     try:
