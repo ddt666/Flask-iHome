@@ -306,7 +306,7 @@ def get_house_index():
     if ret:
         current_app.logger.info("hit house index info redis")
         # 因为redis中保存的是json字符串，所以直接进行字符串拼接返回
-        return '{"errno":0, "errmsg":"OK", "data":%s}' % ret, 200, {"Content-Type": "application/json"}
+        return '{"errno":"0", "errmsg":"OK", "data":%s}' % ret, 200, {"Content-Type": "application/json"}
     else:
         try:
             # 查询数据库，返回房屋订单数目最多的5条数据

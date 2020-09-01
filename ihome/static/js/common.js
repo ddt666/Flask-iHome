@@ -20,3 +20,14 @@ function generateUUID() {
     });
     return uuid;
 }
+
+
+// 解析提取url中的查询字符串参数
+function decodeQuery(){
+    var search = decodeURI(document.location.search);
+    return search.replace(/(^\?)/, '').split('&').reduce(function(result, item){
+        values = item.split('=');
+        result[values[0]] = values[1];
+        return result;
+    }, {});
+}
