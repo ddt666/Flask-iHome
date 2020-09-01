@@ -208,9 +208,10 @@ def get_sms_code(mobile):
     # 发送短信
     # 使用celery异步发送短信，delay函数调用后立即返回
     reslult = send_sms.delay(1, 18618350418, (sms_code, int(constants.SMS_CODE_REDIS_EXPIRES / 60)))
+
     # 返回的是异步执行结果对象
     print(reslult.id)
     # 通过get方法能获取celery异步执行的结果
     # get方法默认是阻塞行为，会等到
-
+    # reslult.get()
     return jsonify(errno=RET.OK, errmsg="发送成功")
