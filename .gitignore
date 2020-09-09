@@ -130,7 +130,7 @@ dmypy.json
 
 /logs
 .idea
-ihome/api_1_0/keys
+.pem
 
 # config文件
 image_storage.py
