@@ -76,10 +76,10 @@ $(document).ready(function(){
 
 
     // 获取筛选条件中的城市区域信息
-    $.get("/api/v1.0/areas", function(data){
+    $.get("/api/v1.0/areas",function(data){
         if ("0" == data.errno) {
             // 用户从首页跳转到这个搜索页面时可能选择了城区，所以尝试从url的查询字符串参数中提取用户选择的城区
-            var areaId = queryData["aid"];
+            var areaId = queryData["area_id"];
             // 如果提取到了城区id的数据
             if (areaId) {
                 // 遍历从后端获取到的城区信息，添加到页面中
@@ -87,16 +87,16 @@ $(document).ready(function(){
                     // 对于从url查询字符串参数中拿到的城区，在页面中做高亮展示
                     // 后端获取到城区id是整型，从url参数中获取到的是字符串类型，所以将url参数中获取到的转换为整型，再进行对比
                     areaId = parseInt(areaId);
-                    if (data.data[i].aid == areaId) {
-                        $(".filter-area").append('<li area-id="'+ data.data[i].aid+'" class="active">'+ data.data[i].aname+'</li>');
+                    if (data.data[i].area_id == areaId) {
+                        $(".filter-area").append('<li area-id="'+ data.data[i].area_id+'" class="active">'+ data.data[i].name+'</li>');
                     } else {
-                        $(".filter-area").append('<li area-id="'+ data.data[i].aid+'">'+ data.data[i].aname+'</li>');
+                        $(".filter-area").append('<li area-id="'+ data.data[i].area_id+'">'+ data.data[i].name+'</li>');
                     }
                 }
             } else {
                 // 如果url参数中没有城区信息，不需要做额外处理，直接遍历展示到页面中
                 for (var i=0; i<data.data.length; i++) {
-                    $(".filter-area").append('<li area-id="'+ data.data[i].aid+'">'+ data.data[i].aname+'</li>');
+                    $(".filter-area").append('<li area-id="'+ data.data[i].area_id+'">'+ data.data[i].name+'</li>');
                 }
             }
             // 在页面添加好城区选项信息后，更新展示房屋列表信息
@@ -128,7 +128,6 @@ $(document).ready(function(){
             }
         }
     });
-
     $(".input-daterange").datepicker({
         format: "yyyy-mm-dd",
         startDate: "today",
@@ -177,4 +176,4 @@ $(document).ready(function(){
             $(".filter-title-bar>.filter-title").eq(2).children("span").eq(0).html($(this).html());
         }
     })
-})
+});

@@ -130,6 +130,7 @@ dmypy.json
 
 /logs
 .idea
+/keys
 
 # config文件
 image_storage.py
