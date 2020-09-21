@@ -243,3 +243,7 @@ class Order(BaseModel, db.Model):
         ),
         default="WAIT_ACCEPT", index=True)
     comment = db.Column(db.Text)  # 订单的评论信息或者拒单原因
+
+    trade_no = db.Column(db.String(80)) # 交易的流水号
+
+    # db.Index("a_b_key",a,b) # 联合索引

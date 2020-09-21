@@ -179,9 +179,11 @@ def check_login():
 def logout():
     """登出"""
 
-    session.clear()
-
     # 清除session数据
+    csrf_token = session.get("csrf_token")
+    session.clear()
+    session["csrf_token"] = csrf_token
+
     resp = BaseResponse()
     resp.errno = RET.OK
     resp.errmsg = "OK"
